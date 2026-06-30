@@ -67,10 +67,14 @@ urlpatterns = [
 ## Homework Questions (answer in your README)
 
 1. In your own words, explain the difference between a project and an app.
+    A project is the overall container for your whole website — it holds the global settings, the main URL routing table, and ties everything together.
+    An app is a smaller, self-contained module inside that project that handles one specific piece of functionality. It is meant to be focused and, ideally, reusable in other projects too.
 2. What command creates a new Django app?
+    python manage.py startapp app_name (e.g. todo_prj)
 3. Why do we register an app inside `INSTALLED_APPS`?
+    Registering an app in INSTALLED_APPS tells Django the app exists and should be included when running things like migrations, the admin site, and template/static file discovery.
 4. What does giving a URL a `name=` actually let you do later?
-
+    Naming a URL lets you reference it elsewhere in your code (templates, views, redirects) using that name instead of hardcoding the path.
 ---
 
 ## Autograding
